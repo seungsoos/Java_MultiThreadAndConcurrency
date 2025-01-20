@@ -36,6 +36,7 @@ public class MyPrint {
 
             while (!Thread.interrupted()) {
                 if (jobQueue.isEmpty()) {
+                    Thread.yield();
                     continue;
                 }
                 try {
